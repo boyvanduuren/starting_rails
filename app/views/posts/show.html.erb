@@ -4,7 +4,7 @@
 </p>
 <p>
 	<strong>Text:</strong>
-	<%= @post.text %>
+	<%= Kramdown::Document.new(@post.text).to_html.html_safe %>
 </p>
 
 <h2>Comments</h2>
