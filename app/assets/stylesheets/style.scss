@@ -1,0 +1,85 @@
+/* Took the idea for this theme from http://notquitetheme.tumblr.com/ */
+
+$bar-bg-color: #3387CC;
+$bar-fg-color: #FFFFFF;
+
+body {
+    background-color: #FAF4E3;
+}
+
+@mixin bar($width) {
+        width: $width;
+        height: 21px;
+        margin-top: 2px;
+        padding: 0 6px;
+        text-align: right;
+        font-size: 0.7em;
+        line-height: 1.8em;
+        color: $bar-fg-color;
+        background-color: $bar-bg-color;
+}
+
+#header {
+    width: 800px;
+    margin: auto;
+    position: relative;
+
+    .description {
+        line-height: 1.6em;
+        font-size: 0.8em;
+        letter-spacing: 0;
+        padding-bottom: 10px;
+    }
+
+    a.title {
+        color: $bar-bg-color;
+        text-decoration: none;
+        font-size: 3.75em;
+        letter-spacing: -1px;
+    }
+
+    .bar {
+        @include bar(780px);
+    }
+}
+
+#content {
+    width: 800px;
+    margin: auto;
+    position: relative;
+
+    .post {
+        margin-top: 40px;
+
+        .timestamp {
+            display: inline-block;
+            @include bar(288px);
+        }
+
+        .space {
+            display: inline-block;
+            width: 288px;
+            margin-top: 2px;
+            padding: 0 6px;
+        }
+
+        .title {
+            display: inline-block;
+            width: 488px;
+            margin-top: 2px;
+            text-align: left;
+            font-size: 0.8em;
+            font-weight: bold;
+            letter-spacing: 0;
+        }
+
+        .message {
+            display: inline-block;
+            width: 488px;
+            text-align: left;
+            font-size: 0.8em;
+            letter-spacing: 0;
+        }
+    }
+}
+

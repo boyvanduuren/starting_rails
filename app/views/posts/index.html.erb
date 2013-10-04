@@ -1,20 +1,20 @@
-<h1>Listing posts</h1>
-
-<%= link_to 'New post', new_post_path %>
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Text</th>
-		<th colspan="3"></th>
-	</tr>
-	<% @posts.each do |post| %>
-	<tr>
-		<td><%= post.title %></td>
-		<td><%= Kramdown::Document.new(post.text).to_html.html_safe %></td>
-		<td><%= link_to 'Show', post %></td>
-		<td><%= link_to 'Edit', edit_post_path(post) %>
-		<td><%= link_to 'Delete', post_path(post),
-		method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	</tr>
-	<% end %>
-</table>
+<div id="content">
+    <% @posts.each do |post| %>
+    <div class="post">
+        <div class="timestamp">
+            timestamp
+        </div>
+        <div class="title">
+            <%= post.title %>
+        </div>
+        <div class="space"></div>
+        <div class="message">
+            <%= Kramdown::Document.new(post.text).to_html.html_safe %>
+            <p>
+            <%= link_to 'Show', post %>, <%= link_to 'Edit', edit_post_path(post) %>, 
+            <%= link_to 'Delete', post_path(post),
+		method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+    <% end %>
+</div>
