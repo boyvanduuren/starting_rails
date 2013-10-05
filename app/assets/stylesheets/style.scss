@@ -40,6 +40,12 @@ body {
 
     .bar {
         @include bar(780px);
+
+	a {
+		color: $bar-fg-color;
+		text-decoration: none;
+	}
+
     }
 }
 
