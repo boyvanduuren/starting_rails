@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  time:
+    formats:
+      no_tz: "%d %b. %Y, %H:%M"

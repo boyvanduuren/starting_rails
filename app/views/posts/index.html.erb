@@ -2,7 +2,7 @@
     <% @posts.each do |post| %>
     <div class="post">
         <div class="timestamp">
-            timestamp
+            <%= l post.created_at, format: :no_tz %>
         </div>
         <div class="title">
             <%= post.title %>
