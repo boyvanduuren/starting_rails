@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Ruby
+ruby '2.0.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -46,3 +49,7 @@ end
 
 # Markdown interpreter
 gem 'kramdown'
+
+# Gems needed for Heroku
+gem 'rails_12factor', group: :production
+gem 'pg'
