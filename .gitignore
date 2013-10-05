@@ -2,3 +2,4 @@ tmp/*
 log/*
 db/*
 config/database.yml
+config/admin.yml

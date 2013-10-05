@@ -50,3 +50,8 @@ gem 'kramdown'
 # Gems needed for Heroku
 gem 'rails_12factor', group: :production
 gem 'pg'
+
+# We're using settingslogic to store user and pass
+# for the CRUD resources in a separate file, so we can
+# put that in our .gitignore
+gem 'settingslogic'

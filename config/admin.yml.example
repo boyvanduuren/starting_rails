@@ -1,0 +1,14 @@
+# config/application.yml used by settingslogic
+
+defaults: &defaults
+    admin_login: "login"
+    admin_password: "password"
+
+development:
+    <<: *defaults
+
+test:
+    <<: *defaults
+
+production:
+    <<: *defaults
